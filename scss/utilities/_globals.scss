@@ -1,0 +1,48 @@
+.fijar{    
+    position: fixed; /* Mantener en el mismo lugar al hacer scroll */
+    left: 0;
+    top: 100px;
+}
+.fijar-2{    
+    position: fixed; /* Mantener en el mismo lugar al hacer scroll */
+    left: 0;
+    top: 70px;    
+}
+.oculto{
+    visibility: hidden;
+    display: none;
+}
+
+.index1{
+    z-index: 2;
+}
+.boton-normal {
+    background-color: $color-button;
+    @extend %button-generic
+}
+.boton-normal:hover,
+.boton-normal:focus {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: $color-button-hover;
+}
+.subrayable:hover,
+.subrayable:focus{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.close-btn{
+    background-color: $color-button-negativo;
+    @extend %button-generic
+}
+.close-btn:hover,
+.close-btn:focus {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: $color-button-negativo;
+}
+
+
+

@@ -1,0 +1,26 @@
+header{ 
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Asegúrate de que esté pegado al borde superior */
+    left: 0; /* Asegúrate de que esté pegado al borde izquierdo */
+    width: 100vw; /* As#ff4747a que el header ocupe el ancho completo de la página */
+    background-color: #ee5858; /* Opcional, para hacer que el fondo sea blanco */
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Opcional, para alinear los elementos verticalmente */
+    justify-content: center; /* Opcional, para alinear los elementos verticalmente */
+    border: 3px solid $color-border-1;
+
+
+    .contenido-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Usa justify-content en lugar de justify-items */
+        align-items: center; /* Opcional, para alinear los elementos verticalmente */
+        width: 80vw; /* As#ff4747a que el header ocupe el ancho completo de la página */
+        button{        
+            padding: 5%;
+        }
+
+    }
+}

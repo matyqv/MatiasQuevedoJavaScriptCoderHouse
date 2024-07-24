@@ -1,0 +1,135 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: $background-corcho;
+}
+
+.flex-col-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+// Calendario
+.calendario {
+    
+    nav {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: 1fr repeat(6, 3fr);
+
+            width: 90vw;
+            list-style: none;
+            padding: 0px;
+            margin: 0;
+
+            border: 2px solid $color-border-3;
+            li {
+                border: 1px solid $color-border-2
+            }
+        }
+    }
+}
+.calendario-cuerpo {
+    height: 50vh;
+    background-color: $color-base;
+    li {
+        padding: 5%;
+        p {
+            width: 50%;
+            width: 50%;
+            margin: 0px;
+            text-align: center;
+            font: bold;
+        }
+    }
+}
+.calendario-cabecera {
+    text-align: center;
+    background-color: #f88820;
+}
+
+.evento-agendado {
+    border-radius: 15%;
+    background-color: $color-evento-agregado;
+}
+.current-day {
+    background-color: $color-today;
+}
+.apagar-colores {
+    background-color: $color-border-1;
+}
+
+
+// formato de formulario simple
+.simple-form {
+    width: 250px;
+    border: 3px solid $color-border-1;
+    padding: 0px 5px 30px 5px;
+    align-items: center;
+    background-color: $color-base;
+    border-radius: 20px;
+
+    input {
+        margin: 5px 0px;
+    }
+
+    button {
+        margin: 10px 0px;
+    }
+}
+
+.fondo-difuminado {
+    /* Ocultar por defecto */
+    z-index: 1;
+    /* Por encima de otros elementos */
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Alto completo */
+    overflow: auto;
+    /* Habilitar scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.712);
+    /* Fondo negro con opacidad */
+}
+
+.cartel-emergente {
+    background-color:$color-base;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid $color-border-3;
+    width: 80%;
+    max-width: 600px;
+}
+
+//Agenda dia
+.agenda-dia{
+    display: grid;
+    width: 80vw;
+    height: 70vh;
+    grid-template-columns: 1fr,6fr;
+    grid-template-rows: repeat(24,1fr);
+    background-color: $color-base;
+    list-style: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid $color-border-1;
+    overflow-x: hidden;
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+
+    .evento-agendado{
+        padding: 20px;
+        border-radius: 0px;
+    }
+    li{
+        border-bottom: 1px solid black;
+        width: 100%;
+        span{
+            padding: 8px;
+        }    
+    }
+}
+

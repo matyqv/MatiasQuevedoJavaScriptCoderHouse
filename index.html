@@ -1,25 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- JS -->
-    <script defer src="./js/script.js"></script>
     <title>Clase 01 _JavaScript</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script async src="js/script.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Matias Fabian Quevedo - pre entrega 1</h1>
+        <div class="contenido-header">
+            <h1 id="titulo">Agenda</h1>
+            <button class="boton-normal oculto" id="agregar-evento" >Agregar</button>
+        </div>
     </header>
 
 
     <main>
-        solamente hice una pequeña interaccino para aplicar los algunos de los conceptos solicitados<br>
-        todavia no termino de definir de que tratara el proyecto final
+        <!-- formulario de Log In-->
+        <section id="Log-In" class="flex-col-align fijar">
+            <div class="simple-form flex-col-align">
+                <h2>Accede a tu cuenta!</h2>
+                <input id="Log-In-User" type="text" placeholder="username">
+                <input id="Log-In-Password" type="text" placeholder="*******">
+                <button class="boton-normal" id="Log-In-Btn">Enviar</button>
+                <samp id="Log-In-Register" class="subrayable">Registrate</samp>
+            </div>
+        </section>
+        <!-- Fondo difuminado y cartel emergente-->
+        <div id="cartel-emergente" class="fondo-difuminado fijar-2 oculto">
+            <div class="cartel-emergente flex-col-align">
+                <h2 id="titulo-cartel-emergente">Cartel en el Medio</h2>
+                <p id="contenido-cartel-emergente">Este es un mensaje en el cartel.</p>
+                <button class="boton-normal" id="cartel-emergente-cerrar-btn">Ok</button>
+            </div>
+        </div>
+
+        <!-- Calendario -->
+    <div class="">
+        <section id="calendario" class="calendario flex-col-align fijar oculto">
+            <nav>
+                <ul id="calendario-cuerpo" class="calendario-cuerpo">
+                </ul>
+            </nav>
+        </section>
+    </div>
+    <!-- Agregar /Editar evento -->
+    <section id="agregar-evento-form" class="flex-col-align fondo-difuminado fijar-2 oculto index1">
+        <div class="simple-form flex-col-align">
+            <button class="close-btn" id="salir-evento-btn">Salir</button>  
+            <h2>Evento!</h2>    
+            <input id="fecha" type="date">
+            <input id="titulo-evento" type="text" placeholder="Que vas a hacer?">
+            <div>
+                <span>inicio:</span>
+                <input id="hora-de-inicio" type="time">
+                <span>fin:</span>
+                <input id="hora-de-finalizacion" type="time">
+            </div>
+            <textarea id="descripcion-evento" name="largeText" rows="10" cols="30" placeholder="describe el evento si quieres..."></textarea>
+            <div>
+                <button class="boton-normal" id="agendar-evento-btn">Agendar</button>         
+                <button class="close-btn" id="eliminar-evento-btn">Eliminar</button>  
+            </div>
+    </section>
+
+    <!-- Agenda Diaria -->
+    <section id="agenda-dia" class="agregar-evento flex-col-align fijar oculto">
+        <button class="close-btn" id="salir-agenda-diaria-btn">Salir</button>  
+        <ul class="agenda-dia">
+        </ul>
+    </section>
+
     </main>
-
-
     <footer>
     </footer>
 </body>

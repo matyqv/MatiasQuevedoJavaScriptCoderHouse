@@ -1,0 +1,206 @@
+@charset "UTF-8";
+.fijar {
+  position: fixed; /* Mantener en el mismo lugar al hacer scroll */
+  left: 0;
+  top: 100px;
+}
+
+.fijar-2 {
+  position: fixed; /* Mantener en el mismo lugar al hacer scroll */
+  left: 0;
+  top: 70px;
+}
+
+.oculto {
+  visibility: hidden;
+  display: none;
+}
+
+.index1 {
+  z-index: 2;
+}
+
+.boton-normal {
+  background-color: #ff8c00;
+}
+
+.boton-normal:hover,
+.boton-normal:focus {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #ff6016;
+}
+
+.subrayable:hover,
+.subrayable:focus {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.close-btn {
+  background-color: #e43b36;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #e43b36;
+}
+
+.boton-normal, .close-btn {
+  padding: 5px;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+header {
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0; /* Asegúrate de que esté pegado al borde superior */
+  left: 0; /* Asegúrate de que esté pegado al borde izquierdo */
+  width: 100vw; /* As#ff4747a que el header ocupe el ancho completo de la página */
+  background-color: #ee5858; /* Opcional, para hacer que el fondo sea blanco */
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Opcional, para alinear los elementos verticalmente */
+  justify-content: center; /* Opcional, para alinear los elementos verticalmente */
+  border: 3px solid rgba(0, 0, 0, 0.7);
+}
+header .contenido-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Usa justify-content en lugar de justify-items */
+  align-items: center; /* Opcional, para alinear los elementos verticalmente */
+  width: 80vw; /* As#ff4747a que el header ocupe el ancho completo de la página */
+}
+header .contenido-header button {
+  padding: 5%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-image: url(./../img/fondo-corcho.jpg);
+}
+
+.flex-col-align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.calendario nav ul {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr repeat(6, 3fr);
+  width: 90vw;
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+  border: 2px solid rgba(0, 0, 0, 0.85);
+}
+.calendario nav ul li {
+  border: 1px solid rgba(73, 46, 28, 0.5);
+}
+
+.calendario-cuerpo {
+  height: 50vh;
+  background-color: #ffecc7;
+}
+.calendario-cuerpo li {
+  padding: 5%;
+}
+.calendario-cuerpo li p {
+  width: 50%;
+  width: 50%;
+  margin: 0px;
+  text-align: center;
+  font: bold;
+}
+
+.calendario-cabecera {
+  text-align: center;
+  background-color: #f88820;
+}
+
+.evento-agendado {
+  border-radius: 15%;
+  background-color: #717eff;
+}
+
+.current-day {
+  background-color: #ffa071;
+}
+
+.apagar-colores {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.simple-form {
+  width: 250px;
+  border: 3px solid rgba(0, 0, 0, 0.7);
+  padding: 0px 5px 30px 5px;
+  align-items: center;
+  background-color: #ffecc7;
+  border-radius: 20px;
+}
+.simple-form input {
+  margin: 5px 0px;
+}
+.simple-form button {
+  margin: 10px 0px;
+}
+
+.fondo-difuminado {
+  /* Ocultar por defecto */
+  z-index: 1;
+  /* Por encima de otros elementos */
+  width: 100%;
+  /* Ancho completo */
+  height: 100%;
+  /* Alto completo */
+  overflow: auto;
+  /* Habilitar scroll si es necesario */
+  background-color: rgba(0, 0, 0, 0.712);
+  /* Fondo negro con opacidad */
+}
+
+.cartel-emergente {
+  background-color: #ffecc7;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.85);
+  width: 80%;
+  max-width: 600px;
+}
+
+.agenda-dia {
+  display: grid;
+  width: 80vw;
+  height: 70vh;
+  grid-template-columns: 1fr, 6fr;
+  grid-template-rows: repeat(24, 1fr);
+  background-color: #ffecc7;
+  list-style: none;
+  padding: 10px;
+  border-radius: 10px;
+  border: 3px solid rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+  overflow-y: auto; /* Permitir desplazamiento vertical */
+}
+.agenda-dia .evento-agendado {
+  padding: 20px;
+  border-radius: 0px;
+}
+.agenda-dia li {
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+.agenda-dia li span {
+  padding: 8px;
+}
+
+/*# sourceMappingURL=main.css.map */

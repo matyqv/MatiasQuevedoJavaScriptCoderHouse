@@ -1,0 +1,9 @@
+// comando para que scss se imprima en en css
+//sass --watch scss/main.scss:css/main.css  
+
+@import "utilities/variables";
+@import "utilities/globals";
+@import"utilities/extend";
+
+@import "components/header";
+@import "components/body";
