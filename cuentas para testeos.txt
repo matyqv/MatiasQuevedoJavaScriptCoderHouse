@@ -1,0 +1,11 @@
+adjunto data de dos usuarios que vienen por defecto en el archivo Json.
+tambien se pueden crear usuarios que se guardaran en el localStorage.
+
+por favor porbar las funcionalidades de agregar y borrar eventos en la agenda.
+como los eventos tienen la funcion de ser eliminados no supe como implementarlos en el archivo Json.
+
+username:luisluis 
+password:patada
+
+username:kiki	
+password:remolacha

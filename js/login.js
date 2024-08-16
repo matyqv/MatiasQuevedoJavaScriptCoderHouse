@@ -31,7 +31,7 @@ async function InicializarRegistroDeCuentas() {
     }
 
     try {
-        const response = await fetch("/db/db.json")
+        const response = await fetch("./db/db.json")
         const data = await response.json();
         CuentasRegistradas=CuentasRegistradasLS.concat(data.user)
     }
