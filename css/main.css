@@ -1,12 +1,14 @@
 @charset "UTF-8";
 .fijar {
-  position: fixed; /* Mantener en el mismo lugar al hacer scroll */
+  position: fixed;
+  /* Mantener en el mismo lugar al hacer scroll */
   left: 0;
   top: 100px;
 }
 
 .fijar-2 {
-  position: fixed; /* Mantener en el mismo lugar al hacer scroll */
+  position: fixed;
+  /* Mantener en el mismo lugar al hacer scroll */
   left: 0;
   top: 70px;
 }
@@ -18,6 +20,10 @@
 
 .index1 {
   z-index: 2;
+}
+
+.index2 {
+  z-index: 3;
 }
 
 .boton-normal {
@@ -52,6 +58,7 @@
   padding: 5px;
   border-radius: 5px;
   border-width: 1px;
+  display: flex;
 }
 
 header {
@@ -75,7 +82,7 @@ header .contenido-header {
   width: 80vw; /* As#ff4747a que el header ocupe el ancho completo de la página */
 }
 header .contenido-header button {
-  padding: 5%;
+  padding: 20px;
 }
 
 body {
@@ -96,6 +103,7 @@ body {
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 1fr repeat(6, 3fr);
   width: 90vw;
+  max-width: 450px;
   list-style: none;
   padding: 0px;
   margin: 0;
@@ -126,7 +134,7 @@ body {
 }
 
 .evento-agendado {
-  border-radius: 15%;
+  border-radius: 20%;
   background-color: #717eff;
 }
 
@@ -136,6 +144,15 @@ body {
 
 .apagar-colores {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.calendario-btn {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+}
+.calendario-btn button {
+  margin: 3px;
 }
 
 .simple-form {
@@ -154,9 +171,6 @@ body {
 }
 
 .fondo-difuminado {
-  /* Ocultar por defecto */
-  z-index: 1;
-  /* Por encima de otros elementos */
   width: 100%;
   /* Ancho completo */
   height: 100%;
@@ -185,7 +199,7 @@ body {
   grid-template-rows: repeat(24, 1fr);
   background-color: #ffecc7;
   list-style: none;
-  padding: 10px;
+  padding: 0px;
   border-radius: 10px;
   border: 3px solid rgba(0, 0, 0, 0.7);
   overflow-x: hidden;
@@ -194,6 +208,7 @@ body {
 .agenda-dia .evento-agendado {
   padding: 20px;
   border-radius: 0px;
+  border: none;
 }
 .agenda-dia li {
   border-bottom: 1px solid black;
@@ -201,6 +216,31 @@ body {
 }
 .agenda-dia li span {
   padding: 8px;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 3px;
+  margin: 2px;
+}
+
+textarea {
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  margin: 10px;
+}
+
+#agregar-evento-form div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+}
+#agregar-evento-form input {
+  width: 80%;
 }
 
 /*# sourceMappingURL=main.css.map */

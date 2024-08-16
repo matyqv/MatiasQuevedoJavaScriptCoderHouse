@@ -5,15 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase 01 _JavaScript</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script async src="js/script.js"></script>
+    <!--Toeastify.css-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!--css linkeado-->
+    <link rel="stylesheet" href="css/main.css">    
+    <!--js  linkeado-->
+    <script defer src="js/login.js"></script>
+    <script defer src="js/agregar-evento.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 
 <body>
     <header>
         <div class="contenido-header">
             <h1 id="titulo">Agenda</h1>
-            <button class="boton-normal oculto" id="agregar-evento" >Agregar</button>
+            <button class="boton-normal oculto" id="agregar-evento" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-calendar-plus" viewBox="0 0 16 16">
+                    <path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7"/>
+                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                </svg>
+            </button>
         </div>
     </header>
 
@@ -29,14 +40,6 @@
                 <samp id="Log-In-Register" class="subrayable">Registrate</samp>
             </div>
         </section>
-        <!-- Fondo difuminado y cartel emergente-->
-        <div id="cartel-emergente" class="fondo-difuminado fijar-2 oculto">
-            <div class="cartel-emergente flex-col-align">
-                <h2 id="titulo-cartel-emergente">Cartel en el Medio</h2>
-                <p id="contenido-cartel-emergente">Este es un mensaje en el cartel.</p>
-                <button class="boton-normal" id="cartel-emergente-cerrar-btn">Ok</button>
-            </div>
-        </div>
 
         <!-- Calendario -->
     <div class="">
@@ -45,13 +48,32 @@
                 <ul id="calendario-cuerpo" class="calendario-cuerpo">
                 </ul>
             </nav>
+            <div class="calendario-btn">
+                <button class="boton-normal" id="mes-anterior-Btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                    </svg>
+                </button>
+                <button class="boton-normal" id="mes-actual-Btn">Mes Actual</button>
+                <button class="boton-normal" id="mes-siguiente-Btn"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg>
+                </button>    
+            </div>
         </section>
     </div>
     <!-- Agregar /Editar evento -->
     <section id="agregar-evento-form" class="flex-col-align fondo-difuminado fijar-2 oculto index1">
         <div class="simple-form flex-col-align">
-            <button class="close-btn" id="salir-evento-btn">Salir</button>  
-            <h2>Evento!</h2>    
+            <div>
+                <span></span>
+                <span><h2>Evento!</h2></span>  
+                <span><button class="close-btn" id="salir-evento-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                    </svg></button></span>
+                
+            </div>    
             <input id="fecha" type="date">
             <input id="titulo-evento" type="text" placeholder="Que vas a hacer?">
             <div>
@@ -77,6 +99,14 @@
     </main>
     <footer>
     </footer>
+
+
+    <!--Sweet Alert link-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Toastyfy.js-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!--Luxon.js-->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/global/luxon.min.js"></script>
 </body>
 
 </html>
